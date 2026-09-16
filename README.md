@@ -33,10 +33,10 @@
 
 
 Src/
-├── main.c          主程序，状态机
-├── bldc.c/h        换相逻辑（正转/反转/停止）
-├── hall.c/h        霍尔传感器读取
-├── pwm.c/h         TIM1 互补 PWM 初始化
-├── encoder.c/h     编码器调速旋钮
-├── key.c/h         按键消抖与事件检测
-└── OLED.c/h        OLED 显示（调试用）
+main.c          主程序，状态机
+bldc.c/h        换相逻辑（正转/反转/停止）
+hall.c/h        霍尔传感器读取
+pwm.c/h         TIM1 互补 PWM 初始化
+encoder.c/h     编码器调速旋钮
+key.c/h         按键消抖与事件检测
+OLED.c/h        OLED 显示（调试用）

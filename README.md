@@ -72,7 +72,7 @@ PID 不起作用（单位不匹配）：
 根本原因：目标值（旋钮刻度）与实际转速（RPS）物理量不统一，两者做减法的误差没有物理意义。
 解决：统一量纲，将旋钮刻度线性映射到 0~50 RPS 目标转速。
 ## 📊 闭环效果演示
-（此处请你替换为你的上位机波形图或B站视频链接）![Uploading up_mospwm.jpg…]()
+<img width="1884" height="909" alt="image" src="https://github.com/user-attachments/assets/0cb3acc5-0fd3-46bd-8133-22ec95b21d2e" />
 
 
 说明：用手捏住电机时，实际转速下降，PID 输出（占空比）自动增大以对抗阻力；松手后转速迅速恢复至目标值。

@@ -30,7 +30,7 @@ void Encoder_Init(void){
 	TIM_ICInitstructure.TIM_Channel=TIM_Channel_2;
 	TIM_ICInitstructure.TIM_ICFilter=0xf;
 	TIM_ICInit(TIM3,&TIM_ICInitstructure);
-	//初始化编码器通道12都用，一周期4个下降沿
+	//初始化编码器通道12都用，一周期4个下降沿,正交编码器
 	TIM_EncoderInterfaceConfig(TIM3,TIM_EncoderMode_TI12,TIM_ICPolarity_Falling,TIM_ICPolarity_Falling);
 	//tim使能
 	TIM_Cmd(TIM3,ENABLE);
@@ -43,12 +43,11 @@ void Encoder_Init(void){
 }
 
 
-int32_t Encoder_getcounter(void){
+int32_t Encoder_getdelta(void){
 	uint16_t encode_now=TIM_GetCounter(TIM3);//新cnt
 	int16_t encoder_delta=encode_now-encoder_last_cnt;//cnt变化量
-	encoder_total_cnt+=encoder_delta;//将cnt变化量存到total中
 	encoder_last_cnt=encode_now;//对齐两者
-	return encoder_total_cnt;//返回total
+	return encoder_delta;//返回total
 }
 
 #define duty_min 10       //duty最小值

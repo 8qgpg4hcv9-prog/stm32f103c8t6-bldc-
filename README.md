@@ -75,6 +75,8 @@ PID 不起作用（单位不匹配）：
 <img width="1884" height="909" alt="image" src="https://github.com/user-attachments/assets/0cb3acc5-0fd3-46bd-8133-22ec95b21d2e" />
 
 
+b站演示：https://www.bilibili.com/video/BV1xraV6eEkH/?spm_id_from=333.1007.top_right_bar_window_history.content.click&vd_source=46662179e134632b0ee548f8902b353c
+
 说明：用手捏住电机时，实际转速下降，PID 输出（占空比）自动增大以对抗阻力；松手后转速迅速恢复至目标值。
 
 ## 🚀 下一步计划
